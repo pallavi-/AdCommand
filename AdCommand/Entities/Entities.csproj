@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{115EA618-3C51-42A3-98AD-8BEA7949779B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RRM.Entities</RootNamespace>
+    <AssemblyName>Entities</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Entities, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Entities.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\AdcommandContext.cs" />
+    <Compile Include="Models\AdPolicyDetail.cs" />
+    <Compile Include="Models\AdPolicyMaster.cs" />
+    <Compile Include="Models\AdProvider.cs" />
+    <Compile Include="Models\AffiliateScript.cs" />
+    <Compile Include="Models\AssetScript.cs" />
+    <Compile Include="Models\BinFilesQueue.cs" />
+    <Compile Include="Models\Blacklist.cs" />
+    <Compile Include="Models\BlacklistedDomain.cs" />
+    <Compile Include="Models\BlacklistedIP.cs" />
+    <Compile Include="Models\ConceptLinkCSSPolicyDetail.cs" />
+    <Compile Include="Models\ConceptLinkCSSPolicyMaster.cs" />
+    <Compile Include="Models\ConceptLinkPolicyMaster.cs" />
+    <Compile Include="Models\ConceptLinkPolicyMasterDistributor.cs" />
+    <Compile Include="Models\Country.cs" />
+    <Compile Include="Models\CSSMaster.cs" />
+    <Compile Include="Models\CSSPolicyDetail.cs" />
+    <Compile Include="Models\CSSPolicyMaster.cs" />
+    <Compile Include="Models\CSSPolicyMasterAdProvider.cs" />
+    <Compile Include="Models\DDCMapping.cs" />
+    <Compile Include="Models\DefaultScriptPerProduct.cs" />
+    <Compile Include="Models\DisplayURLPolicyMaster.cs" />
+    <Compile Include="Models\Distributor.cs" />
+    <Compile Include="Models\DistributorCode.cs" />
+    <Compile Include="Models\DistributorCodeAssetScript.cs" />
+    <Compile Include="Models\DomainScript.cs" />
+    <Compile Include="Models\DomainScriptRevision.cs" />
+    <Compile Include="Models\ErrorRedirectDomain.cs" />
+    <Compile Include="Models\Filter.cs" />
+    <Compile Include="Models\FilterDistributor.cs" />
+    <Compile Include="Models\FilterDistributorScript.cs" />
+    <Compile Include="Models\HelperScript.cs" />
+    <Compile Include="Models\HttpsDomain.cs" />
+    <Compile Include="Models\Install.cs" />
+    <Compile Include="Models\InterstitialLandingSite.cs" />
+    <Compile Include="Models\InterstitialScript.cs" />
+    <Compile Include="Models\InterstitialScriptDomain.cs" />
+    <Compile Include="Models\LastUserActivity.cs" />
+    <Compile Include="Models\Mapping\AdPolicyDetailMap.cs" />
+    <Compile Include="Models\Mapping\AdPolicyMasterMap.cs" />
+    <Compile Include="Models\Mapping\AdProviderMap.cs" />
+    <Compile Include="Models\Mapping\AffiliateScriptMap.cs" />
+    <Compile Include="Models\Mapping\AssetScriptMap.cs" />
+    <Compile Include="Models\Mapping\BinFilesQueueMap.cs" />
+    <Compile Include="Models\Mapping\BlacklistedDomainMap.cs" />
+    <Compile Include="Models\Mapping\BlacklistedIPMap.cs" />
+    <Compile Include="Models\Mapping\BlacklistMap.cs" />
+    <Compile Include="Models\Mapping\ConceptLinkCSSPolicyDetailMap.cs" />
+    <Compile Include="Models\Mapping\ConceptLinkCSSPolicyMasterMap.cs" />
+    <Compile Include="Models\Mapping\ConceptLinkPolicyMasterDistributorMap.cs" />
+    <Compile Include="Models\Mapping\ConceptLinkPolicyMasterMap.cs" />
+    <Compile Include="Models\Mapping\CountryMap.cs" />
+    <Compile Include="Models\Mapping\CSSMasterMap.cs" />
+    <Compile Include="Models\Mapping\CSSPolicyDetailMap.cs" />
+    <Compile Include="Models\Mapping\CSSPolicyMasterAdProviderMap.cs" />
+    <Compile Include="Models\Mapping\CSSPolicyMasterMap.cs" />
+    <Compile Include="Models\Mapping\DDCMappingMap.cs" />
+    <Compile Include="Models\Mapping\DefaultScriptPerProductMap.cs" />
+    <Compile Include="Models\Mapping\DisplayURLPolicyMasterMap.cs" />
+    <Compile Include="Models\Mapping\DistributorCodeAssetScriptMap.cs" />
+    <Compile Include="Models\Mapping\DistributorCodeMap.cs" />
+    <Compile Include="Models\Mapping\DistributorMap.cs" />
+    <Compile Include="Models\Mapping\DomainScriptMap.cs" />
+    <Compile Include="Models\Mapping\DomainScriptRevisionMap.cs" />
+    <Compile Include="Models\Mapping\ErrorRedirectDomainMap.cs" />
+    <Compile Include="Models\Mapping\FilterDistributorMap.cs" />
+    <Compile Include="Models\Mapping\FilterDistributorScriptMap.cs" />
+    <Compile Include="Models\Mapping\FilterMap.cs" />
+    <Compile Include="Models\Mapping\HelperScriptMap.cs" />
+    <Compile Include="Models\Mapping\HttpsDomainMap.cs" />
+    <Compile Include="Models\Mapping\InstallMap.cs" />
+    <Compile Include="Models\Mapping\InterstitialLandingSiteMap.cs" />
+    <Compile Include="Models\Mapping\InterstitialScriptDomainMap.cs" />
+    <Compile Include="Models\Mapping\InterstitialScriptMap.cs" />
+    <Compile Include="Models\Mapping\LastUserActivityMap.cs" />
+    <Compile Include="Models\Mapping\MintCallLimitMap.cs" />
+    <Compile Include="Models\Mapping\MismatchedAffiliateMap.cs" />
+    <Compile Include="Models\Mapping\MissedKeywordMap.cs" />
+    <Compile Include="Models\Mapping\NamiDefaultKeywordMap.cs" />
+    <Compile Include="Models\Mapping\NamiMappingMap.cs" />
+    <Compile Include="Models\Mapping\NetseerDistributorCodeMap.cs" />
+    <Compile Include="Models\Mapping\NetseerDomainMap.cs" />
+    <Compile Include="Models\Mapping\NetseerLandingLinkMap.cs" />
+    <Compile Include="Models\Mapping\NetseerUnitMap.cs" />
+    <Compile Include="Models\Mapping\PopUpAdMap.cs" />
+    <Compile Include="Models\Mapping\PopUpDomainMap.cs" />
+    <Compile Include="Models\Mapping\PopUpLandingSiteMap.cs" />
+    <Compile Include="Models\Mapping\PopUpPerDistributorMap.cs" />
+    <Compile Include="Models\Mapping\ProductMap.cs" />
+    <Compile Include="Models\Mapping\ProxyDefaultScriptMap.cs" />
+    <Compile Include="Models\Mapping\SettingMap.cs" />
+    <Compile Include="Models\Mapping\StatMap.cs" />
+    <Compile Include="Models\Mapping\TestingGuidMap.cs" />
+    <Compile Include="Models\Mapping\ToolbarEventLogMap.cs" />
+    <Compile Include="Models\Mapping\UpdateAssignmentMap.cs" />
+    <Compile Include="Models\Mapping\UpdateSettingMap.cs" />
+    <Compile Include="Models\Mapping\UserMap.cs" />
+    <Compile Include="Models\Mapping\WhitelistedSubDomainMap.cs" />
+    <Compile Include="Models\MintCallLimit.cs" />
+    <Compile Include="Models\MismatchedAffiliate.cs" />
+    <Compile Include="Models\MissedKeyword.cs" />
+    <Compile Include="Models\NamiDefaultKeyword.cs" />
+    <Compile Include="Models\NamiMapping.cs" />
+    <Compile Include="Models\NetseerDistributorCode.cs" />
+    <Compile Include="Models\NetseerDomain.cs" />
+    <Compile Include="Models\NetseerLandingLink.cs" />
+    <Compile Include="Models\NetseerUnit.cs" />
+    <Compile Include="Models\PopUpAd.cs" />
+    <Compile Include="Models\PopUpDomain.cs" />
+    <Compile Include="Models\PopUpLandingSite.cs" />
+    <Compile Include="Models\PopUpPerDistributor.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\ProxyDefaultScript.cs" />
+    <Compile Include="Models\Setting.cs" />
+    <Compile Include="Models\Stat.cs" />
+    <Compile Include="Models\TestingGuid.cs" />
+    <Compile Include="Models\ToolbarEventLog.cs" />
+    <Compile Include="Models\UpdateAssignment.cs" />
+    <Compile Include="Models\UpdateSetting.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\WhitelistedSubDomain.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

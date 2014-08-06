@@ -1,0 +1,28 @@
+<div class="leftPanel">
+		@* DXCOMMENT: Configure the left panel's menu *@
+	@Html.DevExpress().NavBar(settings => {
+        settings.Name = "LeftNavBar";
+        settings.AutoCollapse = false;
+        settings.EnableAnimation = false;
+        settings.Width = System.Web.UI.WebControls.Unit.Percentage(100);
+        settings.ControlStyle.Border.BorderWidth = System.Web.UI.WebControls.Unit.Pixel(0);
+        settings.ControlStyle.Paddings.Padding = System.Web.UI.WebControls.Unit.Pixel(0);
+        settings.ItemLinkMode = ItemLinkMode.TextAndImage;
+    
+        @* Monetization Script Section on left panel *@
+        var groupMonitization = settings.Groups.Add("Monetization Scripts");
+        groupMonitization.Items.Add("Search Ads", "SearchAds", "~/Images/ads.png", "~/AdProvider/adprovider");
+        groupMonitization.Items.Add("Monetization script", "SearchAds", "~/Images/ads.png", "~/AdProvider/adprovider");
+        groupMonitization.Items.Add("Interstitial Ads", "Interstitialads", "~/Images/ads.png", "~/AdProvider/adprovider");
+        groupMonitization.Items.Add("Popup Ads", "PopupAds", "~/Images/ads.png", "~/AdProvider/adprovider");
+    
+        @* General Data Section on left panel *@
+        var groupGeneralData = settings.Groups.Add("General Data");
+        groupGeneralData.Items.Add("Distributer", "Provider", "~/Images/distributor.png", "~/AdProvider/adprovider");
+        groupGeneralData.Items.Add("Provider", "Provider", "~/Images/Ad Provider.png", "~/AdProvider/adprovider");
+        groupGeneralData.Items.Add("Country Code", "CountryCodes", "~/Images/countrycode.png", "~/Country/Country");
+        groupGeneralData.Items.Add("Ad Filters", "Provider", "~/Images/filter.png", "~/AdProvider/adprovider");
+
+    }).GetHtml()
+
+</div>

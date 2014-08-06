@@ -1,0 +1,66 @@
+﻿@model RRM.Entities.Models.User
+@{ Layout = "~/Views/Shared/_lightLayout.cshtml"; }
+<div class="login-panel" style="background: #F6F6F6; border:1px solid #E3E3E3; min-height:250px; width:620px; margin-left:25%">
+
+    <img class="login-img" src="../Images/rrmlogo.png" style="display:inline-block"/>
+    <div class="login-form" style="display: inline-block; vertical-align: top; padding-left:20px" >
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            
+            @Html.DevExpress().Label(settings =>
+            {
+                settings.Name = "lblEmail";
+                settings.Text = "E-mail";
+                settings.Style.Add("font-size", "14px");
+
+            }).GetHtml()
+        <br>
+            <div class="form-field" style="">
+                @Html.DevExpress().TextBox(settings =>
+                {
+                    settings.Name = "Email";
+                    settings.Style.Add("width", "200px");
+                    settings.Style.Add("height", "20px");
+                    settings.Style.Add("font-size", "12px");
+                    settings.Style.Add("padding", "3px 5px 1px 5px");
+                }).GetHtml()
+                @Html.ValidationMessageFor(m => m.Email)
+            </div>
+
+            @Html.DevExpress().Label(settings =>
+            {
+                settings.Name = "lblPassword";
+                settings.Text = "Password";
+                settings.Style.Add("font-size", "14px");
+            }).GetHtml()
+            
+        <div class="form-field" id="login-fields" style="margin:2px">
+            @Html.DevExpress().TextBox(settings =>
+            {
+                settings.Name = "Password";
+                settings.Properties.Password = true;
+                settings.Style.Add("width", "200px");
+                settings.Style.Add("height", "20px");
+                settings.Style.Add("font-size", "12px");
+                settings.Style.Add("padding", "3px 5px 1px 5px");
+                
+            }).GetHtml()
+
+        @Html.ValidationMessageFor(m => m.Password)
+        </div>
+        <div class="login-button">
+                @Html.DevExpress().Button(settings =>
+                {
+                    settings.Name = "Button";
+                    settings.Text = "Log In";
+                    settings.UseSubmitBehavior = true;
+                    settings.Style.Add("padding", "2px 10px 2px 10px");
+                }).GetHtml()
+        </div>
+        }
+    </div>
+    </div>
+
+
+
